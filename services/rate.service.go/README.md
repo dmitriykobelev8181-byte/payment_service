@@ -64,12 +64,11 @@ Singleflight и circuit breaker живут в памяти процесса. Е�
 | `rapira`, `rapira_bid`, `rapira_10` | `RAPIRA_BASE_URL`, `/open/market/rates` | RUB/USDT: ask, bid, ask + 10% |
 | `binance` | `BINANCE_BASE_URL`, `/api/v3/avgPrice` | средняя цена BTCUSDT |
 | `bybit`, `bybit_bid` | `BYBIT_BASE_URL`, `/v5/market/tickers` | BTCUSDT: ask, bid |
-| `bridgepay_kzt` | `BRIDGEPAY_BASE_URL`, `/api/merchant/currency-rates/current` | курс стороны `in`, запрос подписан `BRIDGEPAY_API_KEY` и `BRIDGEPAY_SECRET` |
 | `static_test`, `static_test_2` | нет | тестовые, всегда 100 и 102 |
 
 Тестовые адаптеры регистрируются только при `APP_ENV=development`. По умолчанию `APP_ENV` равен `production`, и в таком окружении их слаги свободны под обычные ручные курсы (`register.go`).
 
-Миграция заводит пять пар: RUB -> USDT через `rapira` (по умолчанию) и `rapira_10`, USDT -> BTC через `binance` (по умолчанию) и `bybit`, KZT -> USDT через `bridgepay_kzt` (`00001_init.up.sql`). У пары может быть только одна строка по умолчанию, это держит уникальный индекс `rate_pairs_one_default_per_pair`. Новый адаптер добавляется строкой в `ProductionAdapters()` в `register.go`.
+Миграция `00001_init.up.sql` заводит начальные пары; среди них RUB -> USDT через `rapira` (по умолчанию) и `rapira_10`, USDT -> BTC через `binance` (по умолчанию) и `bybit`. У пары может быть только одна строка по умолчанию, это держит уникальный индекс `rate_pairs_one_default_per_pair`. Новый адаптер добавляется строкой в `ProductionAdapters()` в `register.go`.
 
 ## Ручные курсы
 
@@ -137,8 +136,6 @@ Singleflight и circuit breaker живут в памяти процесса. Е�
 | `WARM_CACHE_TTL` | `30s` | TTL живого курса в Redis; держите его больше `WARM_INTERVAL`, иначе ключи будут истекать между прогревами |
 | `RATE_FALLBACK_MAX_AGE` | `15m` | предельная давность сохранённого курса, который отдаётся при недоступной бирже |
 | `BINANCE_BASE_URL`, `BYBIT_BASE_URL`, `RAPIRA_BASE_URL` | публичные API бирж | переопределяются для прокси или стенда |
-| `BRIDGEPAY_API_KEY`, `BRIDGEPAY_SECRET` | пусто | без них `bridgepay_kzt` отвечает ошибкой на каждый запрос |
-| `BRIDGEPAY_BASE_URL` | `https://api.bridgepay.example` | адрес merchant API для `bridgepay_kzt` |
 | `HTTP_PORT` | `:8090` | `/healthz`, `/livez`, `/readyz`; в docker-compose - `:8081` |
 | `LOG_LEVEL`, `OTEL_ENABLED`, `OTEL_ENDPOINT` | `info`, `false`, `localhost:4317` | логи и трейсы |
 

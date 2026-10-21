@@ -79,7 +79,7 @@
 
 Входящая сделка проходит `PAID`, потому что между "деньги пришли исполнителю" и "деньги зачислены мерчанту" есть проводка в леджере. Человек в эту точку не вмешивается: Temporal делает оба перехода подряд.
 
-Выплата устроена иначе. У неё единственный маршрут - BridgePay, без групп трафика. Когда BridgePay подтверждает перевод, сделка переходит из `PENDING` сразу в `COMPLETED`.
+Выплата устроена иначе. Она идёт через провайдера выплат, без групп трафика. Когда провайдер подтверждает перевод, сделка переходит из `PENDING` сразу в `COMPLETED`.
 
 Разница заметнее всего, когда истекает TTL. Входящая сделка просто отменяется со статусом `CANCELED` и причиной `EXPIRED`, резерв исполнителя освобождается. Выплату так закрыть нельзя: пока она висит в `PENDING`, мы не знаем, ушли ли деньги получателю. Поэтому по TTL выплата уходит в бессрочный `DISPUTE` без автозакрытия, а резерв мерчанта остаётся на месте, пока спор не разберут вручную.
 
@@ -104,7 +104,7 @@ TTL задаётся в терминале: `deal_ttl_seconds` для входя
 | `core.service.go` | Сделки, споры, мерчанты и терминалы, провайдеры, роутинг | [README](services/core.service.go/README.md) |
 | `account.service.go` | Пользователи и владельцы мерчантов, вход, JWT, TOTP, сессии | [README](services/account.service.go/README.md) |
 | `accounting.service.go` | Леджер: резервы, зачисления, освобождение | [README](services/accounting.service.go/README.md) |
-| `rate.service.go` | Курсы валют от бирж и BridgePay, статичные курсы | [README](services/rate.service.go/README.md) |
+| `rate.service.go` | Курсы валют от внешних источников, статичные курсы | [README](services/rate.service.go/README.md) |
 | `analytics.service.go` | Отчёты и агрегаты по сделкам | [README](services/analytics.service.go/README.md) |
 | `notification.service.go` | Webhook мерчантам | [README](services/notification.service.go/README.md) |
 | `platform.service.go` | Справочники: банки, валюты, методы оплаты | [README](services/platform.service.go/README.md) |

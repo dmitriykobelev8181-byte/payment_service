@@ -149,7 +149,7 @@
   <text x="1516" y="567" class="svc">trader-service</text>
   <line x1="990" y1="552" x2="1492" y2="552" stroke="#1A1A1A" stroke-width="1.6" marker-end="url(#a-ink)"/>
   <text x="1004" y="542" class="verb">запрашивает реквизит</text>
-  <text x="1004" y="570" class="muted">[HTTP через bridgepay, CQRS через manual]</text>
+  <text x="1004" y="570" class="muted">[HTTP для провайдеров, CQRS для трейдеров]</text>
 
   <rect x="360" y="690" width="220" height="52" class="store"/>
   <text x="376" y="721" class="text">PostgreSQL</text>

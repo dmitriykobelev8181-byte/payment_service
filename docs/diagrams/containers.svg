@@ -51,7 +51,7 @@
   <g transform="translate(960,90)">
     <rect width="180" height="90" fill="#E6EEFC" stroke="#2F6FE0" stroke-width="2.5"/><rect width="180" height="14" fill="#2F6FE0"/>
     <text x="14" y="44" class="text">Провайдеры</text>
-    <text x="14" y="66" class="muted">BridgePay и другие</text>
+    <text x="14" y="66" class="muted">Внешние провайдеры</text>
   </g>
   <line x1="960" y1="130" x2="828" y2="130" stroke="#2F6FE0" stroke-width="1.6" marker-end="url(#a-blue)"/>
   <line x1="820" y1="160" x2="952" y2="160" stroke="#1A1A1A" stroke-width="1.6" marker-end="url(#a-ink)"/>
@@ -73,7 +73,7 @@
     <text x="14" y="26" class="name">accounting</text><text x="14" y="48" class="text">леджер и резервы</text>
     <g class="tag" transform="translate(14,62)"><rect width="84" height="22" rx="3"/><text x="8" y="15">PostgreSQL</text></g><g class="tag" transform="translate(104,62)"><rect width="76" height="22" rx="3"/><text x="8" y="15">Formance</text></g></g>
   <g transform="translate(500,400)"><rect width="200" height="96" rx="4" class="card"/>
-    <text x="14" y="26" class="name">rate</text><text x="14" y="48" class="text">курсы бирж и BridgePay</text>
+    <text x="14" y="26" class="name">rate</text><text x="14" y="48" class="text">курсы внешних источников</text>
     <g class="tag" transform="translate(14,62)"><rect width="84" height="22" rx="3"/><text x="8" y="15">PostgreSQL</text></g><g class="tag" transform="translate(104,62)"><rect width="52" height="22" rx="3"/><text x="8" y="15">Redis</text></g></g>
   <g transform="translate(720,400)"><rect width="200" height="96" rx="4" class="card"/>
     <text x="14" y="26" class="name">notification</text><text x="14" y="48" class="text">webhook мерчантам</text>
