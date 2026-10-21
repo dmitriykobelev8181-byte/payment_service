@@ -48,7 +48,7 @@
   <rect x="360" y="120" width="220" height="84" class="comp"/>
   <text x="372" y="146" class="name">delivery/cqrs</text>
   <text x="372" y="166" class="muted">[NATS-контроллер]</text>
-  <text x="372" y="188" class="text">команды трейдера и Telegram</text>
+  <text x="372" y="188" class="text">старые команды; цель: ЛК трейдера</text>
 
   <rect x="360" y="250" width="220" height="84" class="comp"/>
   <text x="372" y="276" class="name">delivery/http/merchant</text>

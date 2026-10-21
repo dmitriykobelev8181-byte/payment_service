@@ -88,7 +88,7 @@
     <text x="14" y="26" class="name">notification</text><text x="14" y="48" class="text">webhook мерчантам</text>
     <g class="tag" transform="translate(14,62)"><rect width="84" height="22" rx="3"/><text x="8" y="15">PostgreSQL</text></g><g class="tag" transform="translate(104,62)"><rect width="52" height="22" rx="3"/><text x="8" y="15">Redis</text></g></g>
   <g transform="translate(940,400)"><rect width="200" height="96" rx="4" class="card"/>
-    <text x="14" y="26" class="name">trader</text><text x="14" y="48" class="text">реквизиты; бот; app*</text>
+    <text x="14" y="26" class="name">trader</text><text x="14" y="48" class="text">реквизиты; ЛК*; app*</text>
     <g class="tag" transform="translate(14,62)"><rect width="84" height="22" rx="3"/><text x="8" y="15">PostgreSQL</text></g><g class="tag" transform="translate(104,62)"><rect width="52" height="22" rx="3"/><text x="8" y="15">Redis</text></g></g>
 
   <g transform="translate(170,520)"><rect width="200" height="96" rx="4" class="card"/>
@@ -103,5 +103,5 @@
   <g transform="translate(830,520)"><rect width="200" height="96" rx="4" class="card"/>
     <text x="14" y="26" class="name">files</text><text x="14" y="48" class="text">вложения</text>
     <g class="tag" transform="translate(14,62)"><rect width="84" height="22" rx="3"/><text x="8" y="15">PostgreSQL</text></g><g class="tag" transform="translate(104,62)"><rect width="30" height="22" rx="3"/><text x="8" y="15">S3</text></g></g>
-  <text x="40" y="632" class="muted">* Пунктир и приложение трейдера — целевая схема, не подтверждённая реализация.</text>
+  <text x="40" y="632" class="muted">* ЛК и приложение для сигнала IN — целевые, не подтверждённые реализацией.</text>
 </svg>

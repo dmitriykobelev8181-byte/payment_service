@@ -52,7 +52,7 @@
     <circle cx="80" cy="58" r="24" fill="#fff" stroke="#2F6FE0" stroke-width="2"/>
     <circle cx="80" cy="52" r="8" fill="#2F6FE0"/><path d="M64 74 Q80 58 96 74" fill="#2F6FE0"/>
     <text x="80" y="124" class="label" text-anchor="middle">Трейдер</text>
-    <text x="80" y="142" class="muted" text-anchor="middle">(кабинет в Telegram)</text>
+    <text x="80" y="142" class="muted" text-anchor="middle">(ЛК на платформе)</text>
   </g>
 
   <text x="814" y="156" class="text" fill="#1A1A1A">запрос реквизита</text>
@@ -60,10 +60,10 @@
   <line x1="1000" y1="200" x2="808" y2="200" stroke="#2F6FE0" stroke-width="1.6" marker-end="url(#a-blue)"/>
   <text x="814" y="222" class="text" fill="#2F6FE0">реквизит, статус</text>
 
-  <text x="814" y="336" class="text" fill="#1A1A1A">карточка сделки</text>
+  <text x="814" y="336" class="text" fill="#1A1A1A">назначение в ЛК</text>
   <line x1="800" y1="346" x2="992" y2="346" stroke="#1A1A1A" stroke-width="1.6" marker-end="url(#a-ink)"/>
   <line x1="1000" y1="380" x2="808" y2="380" stroke="#2F6FE0" stroke-width="1.6" marker-end="url(#a-blue)"/>
-  <text x="814" y="402" class="text" fill="#2F6FE0">подтверждение</text>
+  <text x="814" y="402" class="text" fill="#2F6FE0">банковский сигнал IN</text>
 
   <line x1="600" y1="400" x2="600" y2="472" stroke="#1A1A1A" stroke-width="1.6" marker-end="url(#a-ink)"/>
   <text x="614" y="442" class="text" fill="#1A1A1A">виджет с реквизитом</text>

@@ -23,7 +23,7 @@
 
   <path d="M255 160 Q430 90 598 154" fill="none" stroke="#1A1A1A" stroke-width="1.6" marker-end="url(#a-ink)"/>
   <text x="430" y="80" class="mono" fill="#1A1A1A" text-anchor="middle">SetEnabled(true)</text>
-  <text x="430" y="98" class="muted" text-anchor="middle">только с привязкой Telegram</text>
+  <text x="430" y="98" class="muted" text-anchor="middle">цель: доступный ЛК и сигнал IN</text>
   <path d="M605 204 Q430 290 262 210" fill="none" stroke="#1A1A1A" stroke-width="1.6" marker-end="url(#a-ink)"/>
   <text x="430" y="276" class="mono" fill="#1A1A1A" text-anchor="middle">SetEnabled(false)</text>
 
